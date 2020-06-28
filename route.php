@@ -7,13 +7,15 @@ define('HOME', 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF'])
 $action = $_GET["action"];
 
 $controller = new controller();
+
 $partesURL = explode("/", $action);
 
 
 
 if($action == ''){
     $controller->Home();
-}elseif ($action == '') {
-    $visitController->();
-
+}elseif ($action == 'top10') {
+    $controller->top10();
+}elseif($partesURL[0] == 'buscarUsuarios'){
+    $controller->buscarUsuarios($partesURL[1]);
 }

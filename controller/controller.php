@@ -1,9 +1,9 @@
 <?php
-require_once "./view/.php";
+require_once "./view/view.php";
 require_once "./model/model.php";
 
 
-class registroController {
+class controller {
 
     private $view;
     private $model;
@@ -15,6 +15,16 @@ class registroController {
     }
     
     function Home(){
-        
+        $this->view->showInicio();
+    }
+
+    function top10(){
+        $top10 = $this->model->getTop10();
+        $this->view->showTop10($top10);
+    }
+
+    function buscarUsuarios($patron){
+        $usuarios = $this->model->buscarUsuarios($patron);
+        $this->view->showListaUsuarios($usuarios);
     }
 }
