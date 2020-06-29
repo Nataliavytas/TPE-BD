@@ -17,5 +17,5 @@ if($action == ''){
 }elseif ($action == 'top10') {
     $controller->top10();
 }elseif($partesURL[0] == 'buscarUsuarios'){
-    $controller->buscarUsuarios($partesURL[1]);
+    $controller->buscarUsuarios();
 }

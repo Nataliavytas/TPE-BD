@@ -23,7 +23,8 @@ class controller {
         $this->view->showTop10($top10);
     }
 
-    function buscarUsuarios($patron){
+    function buscarUsuarios(){
+        $patron = $_POST['patron'];
         $usuarios = $this->model->buscarUsuarios($patron);
         $this->view->showListaUsuarios($usuarios);
     }

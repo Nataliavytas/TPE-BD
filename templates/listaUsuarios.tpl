@@ -7,7 +7,7 @@
 <ul class="list-group">
 {foreach $usuario as $usuarios}
   <li class="list-group-item"> {$usuario['nombre']} {$usuario['apellido']}</li>
+{/foreach}
 </ul>
-
 </body>
 </html>
